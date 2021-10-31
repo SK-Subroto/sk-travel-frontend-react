@@ -18,13 +18,12 @@ const Admin = () => {
             <Row className="g-3">
                 <Col lg="3">
                     <div className="bg-white p-3 border border-2">
-                        {/* <h1>Admin Panel</h1> */}
                         <div className="text-center">
                             <img src={user.photoURL} className="img-fluid rounded-circle" alt="" />
                             <h3 className="secondary-color mt-2">{user.displayName}</h3>
                         </div>
                         <ListGroup variant="flush">
-                            <ListGroup.Item as={NavLink} to={`${url}/manage-booked-event`}><People /> Volunteer register list</ListGroup.Item>
+                            <ListGroup.Item as={NavLink} to={`${url}/manage-booked-event`}><People /> Manage All Reservation</ListGroup.Item>
                             <ListGroup.Item as={NavLink} to={`${url}/add-event`}><Plus /> Add Event</ListGroup.Item>
                         </ListGroup>
                     </div>

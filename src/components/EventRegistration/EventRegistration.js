@@ -73,9 +73,9 @@ const EventRegistration = () => {
                             <div className="shadow border border-2 rounded-3 p-2">
                                 <img className="" style={{ width: "100%" }} src={event.img} alt="" />
                                 <div className="mt-3 mx-2">
-                                    <h3 className="primary-color fw-bold"><GeoAlt /> {event.location}</h3>
-                                    <p className="d-inline secondary-background bg-light rounded-pill px-2 me-2"><Calendar /> {event.startDate} - {event.endDate}</p>
-                                    <p className="d-inline secondary-background bg-light rounded-pill px-2"><Clock /> {event.duration} Days</p>
+                                    <h3 className="primary-color fw-bold"><GeoAlt className="mb-1" /> {event.location}</h3>
+                                    <p className="d-inline secondary-background bg-light rounded-pill px-2 me-2"><Calendar className="mb-1" /> {event.startDate} - {event.endDate}</p>
+                                    <p className="d-inline secondary-background bg-light rounded-pill px-2"><Clock className="mb-1" /> {event.duration} Days</p>
                                     <h4 className="primary-color fw-bold mt-3">${event.price}</h4>
                                 </div>
                             </div>

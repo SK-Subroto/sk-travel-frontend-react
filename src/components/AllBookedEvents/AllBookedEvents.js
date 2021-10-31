@@ -71,7 +71,7 @@ const AllBookedEvents = () => {
         <>
             {!bookedList.length ?
                 <div className="d-flex align-items-center justify-content-center mt-5 pt-5">
-                    <ReactLoading type={"spinningBubbles"} color={"#7ea0ff"} height={80} width={80} />
+                    <ReactLoading type={"bars"} color={"#7ea0ff"} height={80} width={80} />
                 </div>
                 :
                 <Container>

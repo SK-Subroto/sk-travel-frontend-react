@@ -21,13 +21,13 @@ const Event = (props) => {
                     </Card.Title>
                     <Card.Text>
                         <div className="d-flex justify-content-between mb-3">
-                            <div><Clock /> {duration} Days Tour</div>
-                            <div><GeoAlt /> {location}</div>
+                            <div><Clock className="mb-1" /> {duration} Days Tour</div>
+                            <div><GeoAlt className="mb-1" /> {location}</div>
                         </div>
                         <span className="text-secondary">{description.slice(0, 130)}</span>
                     </Card.Text>
                     <Card.Footer className="bg-white d-flex justify-content-between align-items-center">
-                        <div className="d-inline secondary-background rounded-pill px-2 py-1"><Calendar /> {startDate} - {endDate}</div>
+                        <div className="d-inline secondary-background rounded-pill px-2 py-1"><Calendar className="mb-1" /> {startDate} - {endDate}</div>
                         
                         <Button onClick={() => handleBookNow(_id)} className="btn btn-sm primary-background">Book Now</Button>
                     </Card.Footer>

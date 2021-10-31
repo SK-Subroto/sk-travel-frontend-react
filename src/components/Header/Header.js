@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar, Button, Badge, Dropdown } from 'react-bootstrap';
-import { BagPlus, ListUl, Person, Power } from 'react-bootstrap-icons';
+import { BagPlus, ListUl, Person, PersonCircle, Power } from 'react-bootstrap-icons';
 import { Link, NavLink } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import useAuth from '../../hooks/useAuth';
@@ -51,11 +51,11 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto d-flex align-items-center fw-bold primary-color" style={{fontSize: 18}}>
                             <Nav.Link as={NavLink} activeStyle={activeStyle} to="/home">Home</Nav.Link>
-                            <Nav.Link as={NavLink} activeStyle={activeStyle} to="/my-events">My Events</Nav.Link>
+                            <Nav.Link as={NavLink} activeStyle={activeStyle} to="/my-events">My Reservation</Nav.Link>
                             <Nav.Link as={NavLink} activeStyle={activeStyle} to="/about">About</Nav.Link>
                             {/* toggle loging logout  */}
                             {!user?.email ?
-                                <Nav.Link as={NavLink} activeStyle={activeStyle} to="/login"><Person /> Login</Nav.Link>
+                                <Nav.Link as={NavLink} activeStyle={activeStyle} to="/login"><PersonCircle className="fs-5 mb-1" /> Login</Nav.Link>
                                 :
                                 <Dropdown>
                                     <Dropdown.Toggle variant="white" id="dropdown-basic">

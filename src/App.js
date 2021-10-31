@@ -28,27 +28,21 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/event/:id">
+            <PrivateRoute path="/event/:id">
               <EventRegistration />
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/my-events">
               <BookedEvents />
             </PrivateRoute>
             <Route path="/about">
               <About />
             </Route>
-            {/* <PrivateRoute path="/add-event">
-              <AddEvent />
-            </PrivateRoute>
-            <PrivateRoute path="/manage-booked-event">
-              <AllBookedEvents />
-            </PrivateRoute> */}
             <Route path="/login">
               <Login />
             </Route>
-            <Route path="/admin">
+            <PrivateRoute path="/admin">
               <Admin />
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <PageNotFound />
             </Route>
