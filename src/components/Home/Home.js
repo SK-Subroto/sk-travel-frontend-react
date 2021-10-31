@@ -9,6 +9,7 @@ import './Home.css';
 const Home = () => {
     const [events, setEvents] = useState([]);
     useEffect(() => {
+        // get all events 
         axios.get('https://sks-travel.herokuapp.com/events')
             .then(res => setEvents(res.data.events))
             .catch(err => console.log(err))

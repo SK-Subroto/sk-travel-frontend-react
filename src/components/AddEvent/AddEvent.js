@@ -6,7 +6,6 @@ import { Calendar, Clock, GeoAlt } from 'react-bootstrap-icons';
 import swal from 'sweetalert';
 
 const AddEvent = () => {
-    const [recentPost, setRecentPost] = useState([1, 2, 3]);
     const titleRef = useRef('');
     const locationRef = useRef('');
     const startDateRef = useRef('');
@@ -27,6 +26,7 @@ const AddEvent = () => {
         const price = priceRef.current.value;
         const description = descriptionRef.current.value;
         const data = { title, location, startDate, endDate, duration, price, img, description };
+        // save data into database 
         axios.post('https://sks-travel.herokuapp.com/events', data)
             .then(res => {
                 if (res.data.insertedId) {

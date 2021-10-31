@@ -28,6 +28,7 @@ const BookedEvents = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
+                    // delete reservation 
                     axios.delete(`https://sks-travel.herokuapp.com/orders/${id}`)
                         .then(res => {
                             if (res.data.deletedCount) {

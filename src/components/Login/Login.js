@@ -22,7 +22,6 @@ const Login = () => {
     }
     return (
         <Container className="text-center mt-5 pt-3">
-            {/* <img className="main-logo" src={logo} alt="" /> */}
             <div className="mx-auto py-5 mt-3 shadow-lg mx-2 d-flex align-items-center" style={{maxWidth: 430, height: 470, borderRadius: 10}}>
                 <div className="mx-auto">
                     <h2 className="primary-color fw-bold">Login With</h2>

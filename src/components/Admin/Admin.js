@@ -29,6 +29,7 @@ const Admin = () => {
                     </div>
                 </Col>
                 <Col lg="9">
+                    {/* nested route */}
                     <div>
                         <Switch>
                             <PrivateRoute exact path={`${path}`}>

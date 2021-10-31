@@ -48,6 +48,7 @@ const EventRegistration = () => {
         })
 
         console.log(data)
+        // create reservation 
         axios.post('https://sks-travel.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {

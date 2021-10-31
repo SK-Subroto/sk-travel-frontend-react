@@ -11,6 +11,7 @@ const AllBookedEvents = () => {
     let findEvent = {};
 
     useEffect(() => {
+        // get order list from db 
         axios.get('https://sks-travel.herokuapp.com/orders')
             .then(res => setBookedList(res.data))
             .then(() => setLoading(false))
@@ -28,8 +29,8 @@ const AllBookedEvents = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    // findEvent = bookedList.find(event => event._id === id)
                     findEvent.status = !findEvent.status;
+                    // update approve or pending 
                     axios.put(`https://sks-travel.herokuapp.com/orders/${id}`, findEvent)
                         .then(res => {
                             if (res.data.modifiedCount > 0) {
