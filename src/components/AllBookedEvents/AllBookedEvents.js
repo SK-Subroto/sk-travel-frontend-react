@@ -7,12 +7,14 @@ import swal from 'sweetalert';
 
 const AllBookedEvents = () => {
     const [bookedList, setBookedList] = useState([]);
-    // const [updateEvent, setUpdateEvent] = useState({});
+    const [loading, setLoading] = useState(true);
     let findEvent = {};
 
     useEffect(() => {
         axios.get('https://sks-travel.herokuapp.com/orders')
             .then(res => setBookedList(res.data))
+            .then(() => setLoading(false))
+            .catch(err => console.log(err))
     }, [findEvent]);
 
     const handleApproveBookedList = (id) => {
@@ -69,7 +71,7 @@ const AllBookedEvents = () => {
     }
     return (
         <>
-            {!bookedList.length ?
+            {loading ?
                 <div className="d-flex align-items-center justify-content-center mt-5 pt-5">
                     <ReactLoading type={"bars"} color={"#7ea0ff"} height={80} width={80} />
                 </div>
@@ -91,31 +93,39 @@ const AllBookedEvents = () => {
                                     <th colSpan="2">Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                {
-                                    bookedList.map((event, index) => {
-                                        return (
-                                            <tr key={index}>
-                                                <td>{index}</td>
-                                                <td>{event.name}</td>
-                                                <td>{event.email}</td>
-                                                <td>{event.date}</td>
-                                                <td>{event.location}</td>
-                                                <td className={!event.status ? "text-warning fw-bold" : "text-success fw-bold"}
-                                                >{!event.status ? "Pending" : "Approved"}</td>
-                                                <td onClick={() => handleApproveBookedList(event._id)}
-                                                    className="text-center"
-                                                    style={{ cursor: 'pointer' }}
-                                                ><CheckSquare className="text-success" /></td>
-                                                <td onClick={() => handleDeleteBookedList(event._id)}
-                                                    className="text-center"
-                                                    style={{ cursor: 'pointer' }}
-                                                ><Trash className="text-danger" /></td>
-                                            </tr>
-                                        )
-                                    })
-                                }
-                            </tbody>
+                            {!bookedList.length ? 
+                                <tbody>
+                                    <tr>
+                                        <h5 className="text-secondary mx-auto mt-2">No Data Found</h5>
+                                    </tr>
+                                </tbody>
+                                :
+                                <tbody>
+                                    {
+                                        bookedList.map((event, index) => {
+                                            return (
+                                                <tr key={index}>
+                                                    <td>{index}</td>
+                                                    <td>{event.name}</td>
+                                                    <td>{event.email}</td>
+                                                    <td>{event.date}</td>
+                                                    <td>{event.location}</td>
+                                                    <td className={!event.status ? "text-warning fw-bold" : "text-success fw-bold"}
+                                                    >{!event.status ? "Pending" : "Approved"}</td>
+                                                    <td onClick={() => handleApproveBookedList(event._id)}
+                                                        className="text-center"
+                                                        style={{ cursor: 'pointer' }}
+                                                    ><CheckSquare className="text-success" /></td>
+                                                    <td onClick={() => handleDeleteBookedList(event._id)}
+                                                        className="text-center"
+                                                        style={{ cursor: 'pointer' }}
+                                                    ><Trash className="text-danger" /></td>
+                                                </tr>
+                                            )
+                                        })
+                                    }
+                                </tbody>
+                            }
                         </Table>
                     </div>
                 </Container>

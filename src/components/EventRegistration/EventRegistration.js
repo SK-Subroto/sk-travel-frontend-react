@@ -69,7 +69,7 @@ const EventRegistration = () => {
             <Row className="g-4">
                 <Col lg="8">
                     <Row className="">
-                        <Col>
+                        <Col lg="6">
                             <div className="shadow border border-2 rounded-3 p-2">
                                 <img className="" style={{ width: "100%" }} src={event.img} alt="" />
                                 <div className="mt-3 mx-2">
@@ -80,13 +80,16 @@ const EventRegistration = () => {
                                 </div>
                             </div>
                         </Col>
-                        <Col>
-                            <div className="tour-plans px-2">
+                        <Col lg="6">
+                            <div className="tour-plans px-2 mt-3">
                                 {
                                     duration.map((d, i) => <div key={i}>
                                         <h2 className="primary-color">Day: {i + 1}</h2>
                                         <p className="secondary-color">
-                                            Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+                                            Even if you're just taking a short trip, it pays to be prepared when you travel.
+                                            The first item to pack is always common sense. 
+                                            Think ahead about the conditions you'll encounter at your destination.
+                                            A special diet or an exercise program.
                                         </p>
                                     </div>)
                                 }

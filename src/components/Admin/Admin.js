@@ -14,7 +14,7 @@ const Admin = () => {
     const {user} = useAuth();
     let { path, url } = useRouteMatch();
     return (
-        <Container fluid className="" style={{height: '100vh'}}>
+        <Container fluid className="" style={{minHeight: '100vh'}}>
             <Row className="g-3">
                 <Col lg="3">
                     <div className="bg-white p-3 border border-2">

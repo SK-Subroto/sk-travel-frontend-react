@@ -11,7 +11,7 @@ const Footer = () => {
                     <Col lg="5" xs="12">
                         <div className="px-3">
                             <div className="d-flex align-items-center mb-2">
-                                <img style={{ height: 50 }} src="https://www.graphicsprings.com/filestorage/stencils/74cd6537a23f9e0bd1c4525d06517099.png?width=500&height=500" alt="" />
+                                <img style={{ height: 50 }} src="https://i.ibb.co/YN05r27/sk-travel-logo.png" alt="" />
                                 <h3>SK Travel</h3>
                             </div>
                             <p className="text-secondary fs-6">Land behold it created good saw after she'd Our set living.
@@ -46,13 +46,13 @@ const Footer = () => {
                     <Col lg="3" xs="12">
                         <ListGroup className="mt-5">
                             <ListGroup.Item className="text-white bg-transparent border-0 fw-bolder mb-2">Contact Us</ListGroup.Item>
-                            <ListGroup.Item className="text-white bg-transparent border-0">76/A, Green Lane, Dhanmondi, NYC</ListGroup.Item>
-                            <ListGroup.Item className="text-white bg-transparent border-0">demomail89@gmail.com</ListGroup.Item>
-                            <ListGroup.Item className="text-warning bg-transparent border-0 fw-bold fs-4">+10 (78) 738-9083</ListGroup.Item>
+                            <ListGroup.Item className="text-white bg-transparent border-0">76/A, Green Lane, Dhanmondi, Dhaka</ListGroup.Item>
+                            <ListGroup.Item className="text-white bg-transparent border-0">subroto.sks@gmail.com</ListGroup.Item>
+                            <ListGroup.Item className="text-warning bg-transparent border-0 fw-bold fs-4">(+880) 178817353</ListGroup.Item>
                         </ListGroup>
                     </Col>
                 </Row>
-                <div className="text-center pb-3 mt-5 pt-5">© 2021 SK Diagnostic. All rights reserved</div>
+                <div className="text-center pb-3 mt-5 pt-5">© 2021 SK Travel. All rights reserved</div>
             </div>
         </Container>
     );

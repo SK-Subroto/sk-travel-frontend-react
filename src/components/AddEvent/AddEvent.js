@@ -19,10 +19,10 @@ const AddEvent = () => {
         const title = titleRef.current.value;
         const location = locationRef.current.value;
         const startDateRaw = new Date(startDateRef.current.value).toString().split(' ');
-        const startDate = startDateRaw[2]+' '+startDateRaw[1];
+        const startDate = startDateRaw[2] + ' ' + startDateRaw[1];
         const endDateRaw = new Date(endDateRef.current.value).toString().split(' ');
-        const endDate = endDateRaw[2]+ ' ' +endDateRaw[1];
-        const duration = Math.abs(parseInt(endDateRaw[2]) - parseInt(startDateRaw[2]));
+        const endDate = endDateRaw[2] + ' ' + endDateRaw[1];
+        const duration = Math.abs(new Date(endDateRef.current.value) - new Date(startDateRef.current.value)) / (1000 * 3600 * 24);
         const img = imgUrlRef.current.value;
         const price = priceRef.current.value;
         const description = descriptionRef.current.value;
@@ -42,7 +42,6 @@ const AddEvent = () => {
             .catch(err => {
                 console.log(err);
             })
-        console.log(data)
     }
     return (
         <Container>
@@ -90,7 +89,7 @@ const AddEvent = () => {
 
                         <Form.Group className="mb-3" controlId="formGridDescription">
                             <Form.Label>Description</Form.Label>
-                            <Form.Control ref={descriptionRef} as="textarea" rows={3} placeholder="Apartment, studio, or floor" />
+                            <Form.Control ref={descriptionRef} as="textarea" rows={3} placeholder="Description...." />
                         </Form.Group>
 
 

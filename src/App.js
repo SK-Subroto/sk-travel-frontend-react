@@ -14,6 +14,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import About from './components/About/About';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Admin from './components/Admin/Admin';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <AuthProvider>
         <Router>
           <Header />
+          <ScrollToTop />
           <Switch>
             <Route exact path="/">
               <Home />

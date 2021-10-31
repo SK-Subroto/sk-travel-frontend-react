@@ -41,7 +41,7 @@ const Header = () => {
                     <Navbar.Brand onClick={handleHomePage} style={{ cursor: 'pointer' }} className="d-flex align-items-center fs-3 primary-color">
                         <img
                             alt=""
-                            src="https://www.graphicsprings.com/filestorage/stencils/74cd6537a23f9e0bd1c4525d06517099.png?width=500&height=500"
+                            src="https://i.ibb.co/YN05r27/sk-travel-logo.png"
                             height="50"
                             className="d-inline-block align-top"
                         />{' '}

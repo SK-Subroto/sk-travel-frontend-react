@@ -107,33 +107,31 @@ const Home = () => {
                             <Col className="px-5" lg="6">
                                 <Accordion defaultActiveKey="0">
                                     <Accordion.Item eventKey="0" className="border-0">
-                                        <Accordion.Header>Starts the automated process.</Accordion.Header>
+                                        <Accordion.Header>How visa automated process?</Accordion.Header>
                                         <Accordion.Body className="text-secondary">
                                             The automated process starts as soon as
-                                            your clothes go into the machine. Duis cursus, mi
-                                            quis viverra ornare.
+                                            your request go into the machine. System will autometically detect.
                                         </Accordion.Body>
                                     </Accordion.Item>
                                     <Accordion.Item eventKey="1" className="border-0">
-                                        <Accordion.Header>The automated process starts.</Accordion.Header>
+                                        <Accordion.Header>How far in advance my hotel reservations?</Accordion.Header>
                                         <Accordion.Body className="text-secondary">
-                                            The automated process starts as soon as
-                                            your clothes go into the machine. Duis cursus, mi
+                                            The reservation process starts as soon as
+                                            your reserve your hotel. Duis cursus, mi
                                             quis viverra ornare.
                                         </Accordion.Body>
                                     </Accordion.Item>
                                     <Accordion.Item eventKey="2" className="border-0">
-                                        <Accordion.Header>Automated process starts.</Accordion.Header>
+                                        <Accordion.Header>What should I do if my flight is canceled?</Accordion.Header>
                                         <Accordion.Body className="text-secondary">
-                                            The automated process starts as soon as
-                                            your clothes go into the machine. Duis cursus, mi
-                                            quis viverra ornare.
+                                           If your filight get cancel by any chance.
+                                           We will refund your full money. Automaticlly refun to your bank.
                                         </Accordion.Body>
                                     </Accordion.Item>
                                     <Accordion.Item eventKey="3" className="border-0">
-                                        <Accordion.Header>Process the automated magic.</Accordion.Header>
+                                        <Accordion.Header>What's the best day to book travel plans?</Accordion.Header>
                                         <Accordion.Body className="text-secondary">
-                                            The automated process starts as soon as
+                                            In summer or fall season holiday as soon as
                                             your clothes go into the machine. Duis cursus, mi
                                             quis viverra ornare.
                                         </Accordion.Body>
