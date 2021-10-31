@@ -1,0 +1,14 @@
+.primary-color{
+    color: #00095E
+}
+.secondary-color{
+    color: #7ea0ff;
+}
+.primary-background{
+    background-color: #00095E;
+    color: white;
+}
+.secondary-background{
+    background-color: #e3e9f8;
+    color: #7ea0ff;
+}
